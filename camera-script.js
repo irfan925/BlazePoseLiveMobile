@@ -37,7 +37,7 @@ var pre = 0, curr = 0, forw = 0, flag = 1, threshold = 23, steps = 0;
 
 const config ={
     //video:{ width: 960, height: 540, fps: 30}
-    video:{ width: 480, height: 640, fps: 30}
+    video:{ width: 540, height: 640, fps: 30}
     //video:{ width: 280, height: 440, fps: 30}
 };
 /*
