@@ -30,6 +30,7 @@ var bezier_points = [];
 const config ={
     ///video:{width:70, height:auto}
     video:{ width: 960, height: 540, fps: 30}
+    //video:{ width: 960, height: auto, fps: 30}
     //video:{ width: 480, height: 640, fps: 30}
     //video:{ width: 280, height: 440, fps: 30}
 };
@@ -40,7 +41,6 @@ const config ={
 function resetParam(button)
 {
      
-    //window.location.reload();
     min = 0;
     sec = 0;
     document.getElementById('time').innerHTML=min+":"+sec;
@@ -48,6 +48,7 @@ function resetParam(button)
     e.value = "No";
     bezier_points = [];
     console.log(bezier_points);
+    window.location.reload();
 }
 
 function setParam(button)

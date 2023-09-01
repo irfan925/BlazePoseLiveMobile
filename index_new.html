@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Gait Analysis</title>
+    <link rel="icon" type="image/png" href="uoh.png">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/control_utils_3d.js" crossorigin="anonymous"></script>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 id="heading">GAIT ANALYSIS</h1>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-12 col-md-9" id="video-container">
+                <canvas id="pose-canvas">
+                    <video id="pose-video" muted> </video>
+                </canvas>
+            </div>
+
+            <div class="col-md-3" id="parameter-container">
+
+                <div id="block-1">
+                    <h2 id="time">0:0</h3>
+                        <button type="button" class="btn btn-primary" id="dow">Download CSV File</button>
+                </div>
+
+
+                <div id="block-2">
+                    <label>Walking direction:</label>
+                    <select id="dir" onchange="change()" autofocus="autofocus" required
+                        class="btn btn-info dropdown-toggle">
+                        <option value="No" selected="selected">Select</option>
+                        <option value="LR">Left to Right</option>
+                        <option value="RL">Right to Left</option>
+                    </select><br>
+                    <div class="row justify-content-center">
+                        <span> <button type="button" class="btn btn-success" id="bttn3">Start</button>
+                            <button type="button" class="btn btn-danger" id="bttn4">Reset</button> </span>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Joint Angle parameters</div>
+                    <div class="panel-body">
+
+                        <table id="block-3">
+                            <tr>
+                                <th></th>
+                                <th>Right</th>
+                                <th>Left</th>
+
+                            </tr>
+
+                            <tr>
+                                <td>Knee Angle</td>
+                                <td id="k-angle-R"></td>
+                                <td id="k-angle-L"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ankle Angle</td>
+                                <td id="ank-angle-R"></td>
+                                <td id="ank-angle-L"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Hip Angle</td>
+                                <td id="hip-angle-R"></td>
+                                <td id="hip-angle-L"></td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="container-3" class="row">
+            <div class="col-xs-12 col-sm-5"><canvas id="curveL" class="curve"></canvas></div>
+            <div class="col-xs-12 col-sm-5"><canvas id="curveR" class="curve"></canvas></div>
+        </div>
+
+        <!--<script src="js/face-api.min.js"></script>-->
+        <script src="camera-script.js"> </script>
+    </div>
+</body>
+
+</html>s
