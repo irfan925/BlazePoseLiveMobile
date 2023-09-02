@@ -25,7 +25,8 @@ var param = [], tm1 = 0;
 
 var bezier_points = [];
 
-
+console.log(window.screen.availWidth)
+console.log(window.screen.width * window.devicePixelRatio)
 
 const config ={
     ///video:{width:70, height:auto}
