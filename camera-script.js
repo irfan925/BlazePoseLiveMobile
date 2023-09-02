@@ -30,7 +30,7 @@ console.log(window.screen.width * window.devicePixelRatio)
 
 const config ={
     ///video:{width:70, height:auto}
-    video:{ width: 480, height: 756, fps: 30}
+    video:{ width: 756, height: 480, fps: 30}
     //video:{ width: 960, height: auto, fps: 30}  //540 height
     //video:{ width: 480, height: 640, fps: 30}
     //video:{ width: 280, height: 440, fps: 30}
