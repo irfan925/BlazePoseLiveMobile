@@ -9,8 +9,8 @@ const video = document.getElementById("pose-video");
 
 const pose = new Pose({
     locateFile: (file) => {
-        return `node_modules/@mediapipe/pose/${file}`;
-        //return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+        ///return `node_modules/@mediapipe/pose/${file}`;
+        return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
     }
 });
 
