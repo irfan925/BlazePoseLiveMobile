@@ -40,10 +40,6 @@
             display: none;
         }
 
-        #frame {
-            width: 100%;
-            height: auto;
-        }
 
         #container-1 {
             float: left;
@@ -162,6 +158,9 @@
                 width: 100%;
                 padding: 5px;
             }
+            td, label, button{
+                font-size: large;
+            }
         }
     </style>
 
@@ -185,7 +184,6 @@
 
     <h1 id="heading">GAIT ANALYSIS</h1>
 
-    <div id="frame">
         <div id="container-1">
             <canvas id="pose-canvas"></canvas>
             <video id="pose-video" muted> </video>
@@ -240,7 +238,7 @@
                 </tr>
             </table>
         </div>
-    </div>
+    
 
     <div id="container-3">
         <canvas id="curveL" class="curve"></canvas>
