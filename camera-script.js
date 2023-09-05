@@ -39,7 +39,7 @@ const config ={
 
 
 
-function resetParam(button)
+function resetParam(button) 
 {
      
     min = 0;
@@ -147,7 +147,7 @@ function download_csv(){
     hiddenElement.target = '_blank';
     
     //provide the name for the CSV file to be downloaded
-    hiddenElement.download = 'gaitData.csv';
+    hiddenElement.download = txt+'gaitData.csv';
     hiddenElement.click();
 }
 
