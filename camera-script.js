@@ -9,7 +9,6 @@ const video = document.getElementById("pose-video");
 
 const pose = new Pose({
     locateFile: (file) => {
-        ///return `node_modules/@mediapipe/pose/${file}`;
         return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
     }
 });
@@ -41,7 +40,7 @@ const config = {
 
 
 
-function resetParam(button) {
+function resetParam() {
 
     min = 0;
     sec = 0;
@@ -159,7 +158,7 @@ async function main() {
     }
 
     resetBttn.onclick = function () {
-        resetParam(setBttn)
+        resetParam()
     }
 
     download.onclick = function () {
